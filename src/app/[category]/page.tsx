@@ -20,6 +20,10 @@ const getData = async(category: string)=>{
       const data = await client.fetch(query)
       return data
 }
+
+// Opt out of caching for all data requests in the route segment
+export const dynamic = 'force-dynamic'
+
 const page = async({params}:{params:{category: string}}) => {
     const data: simplifiedProduct[] = await getData(params.category)
     return (

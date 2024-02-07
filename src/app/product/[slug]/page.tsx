@@ -7,6 +7,9 @@ import { Star, Truck } from 'lucide-react';
 import AddToBag from '@/app/components/AddToBag';
 import BuyNow from '@/app/components/BuyNow';
 
+// Opt out of caching for all data requests in the route segment
+export const dynamic = 'force-dynamic'
+
 const getData = async(slug: string)=>{
   const query = `*[_type=='product' && slug.current == "${slug}"][0]{
     _id,
