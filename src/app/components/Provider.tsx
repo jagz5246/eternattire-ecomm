@@ -12,7 +12,7 @@ const Provider = ({children}: {children: ReactNode}) => {
     cancelUrl='https://eternattire-ecomm.vercel.app/stripe/error'
     // successUrl={`${window.location.origin} +"/success"`}
     // cancelUrl={`${window.location.origin} +"/error"`}
-    billingAddressCollection={false}
+    billingAddressCollection={true}
     currency='INR'
     language='en-US'
     shouldPersist={true}>
