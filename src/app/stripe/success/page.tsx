@@ -15,7 +15,7 @@ const page = () => {
                 Thank you for your purchase. Hope you enjoyed shopping with us.
             </p>
             <p>Have a great day!</p>
-            <Button >
+            <Button className='mt-4 p-4 cursor-pointer bg-secondary text-gray-900 hover:text-white'>
                 <Link href='/'>Go home</Link>
             </Button>
             </div>
