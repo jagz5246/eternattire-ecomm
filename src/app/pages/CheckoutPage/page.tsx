@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useShoppingCart } from 'use-shopping-cart'
 import { Button } from '@/components/ui/button'
 
-const page = () => {
+const Page = () => {
     const { cartDetails, redirectToCheckout } = useShoppingCart()
 
     const handleCheckout = async() =>{
@@ -107,4 +107,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page
