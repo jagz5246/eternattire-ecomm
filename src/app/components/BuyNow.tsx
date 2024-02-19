@@ -14,6 +14,10 @@ const BuyNow = ({name, description, price, currency, image, price_id}: ProductCa
 
   const buyNow = (price_id: string) =>{
     addItem(product)
+<<<<<<< HEAD
+=======
+    // push("http://localhost:3000/pages/CheckoutPage")
+>>>>>>> a96788a (updated footer)
     push("https://eternattire-ecomm.vercel.app/pages/CheckoutPage")
   }
 
