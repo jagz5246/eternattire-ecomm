@@ -20,8 +20,8 @@ const Navbar = () => {
     <header className="mb-8 border-b">
         <div className="flex items-center justify-between mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl">
             <Link href="/">
-                <h1 className='text-xl md:text-4xl font-extralight'>etern
-                <span className="text-primary font-serif">Attire.</span></h1>
+                <h1 className='text-xl md:text-6xl font-extralight'>e
+                <span className="text-primary font-serif">A.</span></h1>
             </Link>
 
             <nav className='hidden gap-12 lg:flex 2xl:ml-16'>
