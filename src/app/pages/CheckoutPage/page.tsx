@@ -5,7 +5,7 @@ import { useShoppingCart } from 'use-shopping-cart'
 import { Button } from '@/components/ui/button'
 
 const page = () => {
-    const { cartCount, shouldDisplayCart, handleCartClick, cartDetails, removeItem, clearCart, totalPrice, redirectToCheckout } = useShoppingCart()
+    const { cartDetails, redirectToCheckout } = useShoppingCart()
 
     const handleCheckout = async(event: any) =>{
       // event.preventDefault();
