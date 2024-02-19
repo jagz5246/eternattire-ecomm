@@ -7,17 +7,13 @@ import { Button } from '@/components/ui/button'
 const page = () => {
     const { cartDetails, redirectToCheckout } = useShoppingCart()
 
-    const handleCheckout = async(event: any) =>{
-      // event.preventDefault();
+    const handleCheckout = async() =>{
       try {
-          const result = await redirectToCheckout()
-          console.log(result)
-          
+          const result = await redirectToCheckout()          
       } catch (error) {
           console.log(error)
       }
   }
-  {console.log(cartDetails)}
 
 
   return (
