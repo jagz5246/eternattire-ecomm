@@ -22,7 +22,7 @@ const BuyNow = ({name, description, price, currency, image, price_id}: ProductCa
         price_id: price_id
     }
   return (
-   <Button onClick={()=>{buyNow(product.price_id)}} className='cursor-pointer bg-secondary text-gray-900 hover:text-white'>Buy Now</Button>
+   <Button onClick={()=>buyNow(product.price_id)} className='cursor-pointer bg-secondary text-gray-900 hover:text-white'>Buy Now</Button>
   )
 }
 

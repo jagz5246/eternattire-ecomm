@@ -6,13 +6,17 @@ import {
     SheetHeader,
     SheetTitle,
   } from "@/components/ui/sheet"
+import Link from "next/link"
 import { Delete } from "lucide-react"
+import { useRouter } from 'next/navigation'
 import Image from "next/image"
 import React from 'react'
 import { useShoppingCart } from "use-shopping-cart"
+import CheckoutPage from "../pages/CheckoutPage/page"
 
 const ShoppingCart = () => {
     const { cartCount, shouldDisplayCart, handleCartClick, cartDetails, removeItem, clearCart, totalPrice, redirectToCheckout } = useShoppingCart()
+    const router = useRouter()
 
     const handleCheckout = async(event: any) =>{
         event.preventDefault();
@@ -47,18 +51,16 @@ const ShoppingCart = () => {
                                     height={100}/>
                                 </div>
                                 <div className="ml-4 flex flex-1 flex-col">
-                        <div>
-                          <div className="flex justify-between text-base font-medium text-gray-900">
-                            <h3>{entry.name}</h3>
-                            <p className="ml-4">${entry.price}</p>
-                          </div>
-                          <p className="mt-1 text-sm text-gray-500 line-clamp-1">
-                            {entry.description}
-                          </p>
-                        </div>
+                                <div>
+                                <div className="flex justify-between text-base font-medium text-gray-900">
+                                  <h3>{entry.name}</h3>
+                                  <p className="ml-4">Rs.{entry.price}</p>
+                                </div>
+                              <p className="mt-1 text-sm text-gray-500 line-clamp-1">{entry.description}</p>
+                              </div>
 
-                        <div className="flex flex-1 items-end justify-between text-sm">
-                          <p className="text-gray-500">QTY: {entry.quantity}</p>
+                            <div className="flex flex-1 items-end justify-between text-sm">
+                            <p className="text-gray-500">QTY: {entry.quantity}</p>
 
                           <div className="flex">
                             <button
@@ -85,7 +87,7 @@ const ShoppingCart = () => {
                     </div>
                     <p className="mt0.5 text-sm text-gray-500">Shipping and taxes are calculated at checkout</p>
                     <div className="mt-6 ">
-                        {!(cartCount==0) && <Button onClick={handleCheckout} className="w-full">Checkout</Button>}
+                        {!(cartCount==0) && <Button className="w-full" onClick={()=>handleCartClick()}><Link href='/pages/CheckoutPage' >Proceed to Checkout</Link></Button>}
                     </div>
                     <div className="mt-6 flex justify-center text-sm text-gray-500"><p>
                     Or{" "}
@@ -100,3 +102,5 @@ const ShoppingCart = () => {
 
 export default ShoppingCart
   
+
+{/* <Button onClick={handleCheckout} className="w-full">Checkout</Button> */}
