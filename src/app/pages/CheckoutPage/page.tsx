@@ -44,7 +44,6 @@ const Page = () => {
                   </li>
             ))}
             </>
-            <Button type='submit' className="w-2/3 cursor-pointer text-center ml-[18%]">Checkout</Button>
           </ul>
         </div>
 
@@ -100,6 +99,7 @@ const Page = () => {
             <label className='text-md' htmlFor="email">Email: </label><br />
             <input className=' outline outline-gray-900/10 mt-2 w-2/3 px-2 py-4 rounded mb-4 focus:outline-red-600' type="email" name="email" id="email" placeholder='email' required/>
             </div>
+            <Button type='submit' className="w-2/3 cursor-pointer text-center ml-[18%]">Checkout</Button>
         </div>
 
       </form>
